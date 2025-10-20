@@ -17,7 +17,34 @@
         font-family:'Pacifico',cursive;font-size:3.5em;color:#ff6b6b;margin-bottom:0.4em;text-shadow:0 4px 10px rgba(0,0,0,0.1);
       }
 
-      .message{}
+      .message{
+        font-size:1.4em;max-width:600px;margin-bottom:1.5em;line-height:1.6;background:rgba(255,255,255,0.5);padding:20px 25px;border-radius:15px;backdrop-filter:blur(6px);
+        animation:fadeIn 2s ease forwards;
+      }
+
+      @keyframes fadeIn {
+        from{opacity:0;transform:translateY(30px)}
+        to{opacity:1;transform:translateY(0)}
+      }
+
+      #celebrate{
+        position:fixed;bottom:20px;right:20px;background:linear-gradient(45deg,#74c0fc,#9775fa);border-radius:50%;width:65px;height:65px;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 5px 15px rgba(0,0,0,0.2);cursor:pointer;transition:0.3s;
+      }
+      #celebrate:hover{transform:scale(1.1)}
+
+      .balloon{
+        position:absolute;width:50px;height:70px;border-radius:50%;background:red;opacity:0.9;animation:float 8s ease-in infinite;
+      }
+
+      @keyframes float {
+        0%{}
+        100%{}
+      }
+
+      canvas#confetti{position}
     </style>
   </head>
+  <body>
+    <canvas id="confetti"></canvas>
+  </body>
 </html>
